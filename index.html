@@ -4,133 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===================== STYLESHEETS ===================== -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts: Playfair Display + Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/logo_jerusalem.png">
+
     <title>Jerusalém</title>
 </head>
 
-<body class="">
-    <header>
+<body>
 
-        <figure>
-            <img src="img/logo_jerusalem.png" alt="logo tipo Jerusalém">
+    <!-- ===================== HEADER / NAVIGATION ===================== -->
+    <header id="main-header">
+
+        <!-- Logo -->
+        <figure class="header-logo">
+            <img src="img/logo_jerusalem.png" alt="Jerusalem logo">
         </figure>
 
-        <nav class="nav-header">
+        <!-- Hamburger button - visible only on mobile -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <nav class="nav-header" id="mainNav">
             <ul class="menu-header">
-                <li class="menu-item"><a href="#on-city"><i class="fa-solid fa-city"></i> Sobre a Cidade</a></li>
-                <li class="menu-item"><a href="#tourist-spot"><i class="fa-solid fa-bus"></i> Pontos Turísticos</a></li>
-                <li class="menu-item"><a href=""><i class="fa-solid fa-calendar"></i> Culturas e Eventos</a></li>
-                <li class="menu-item"><a href=""><i class="fa-solid fa-utensils"></i> Gastronomia</a></li>
-                <li class="menu-item"><a href=""><i class="fa-solid fa-hotel"></i> Hospedagem</a></li>
-                <li class="menu-item"><a href=""><i class="fa-solid fa-plane"></i> Como Chegar</a></li>
+                <li class="menu-item">
+                    <a href="#on-city"><i class="fa-solid fa-city"></i> Sobre a Cidade</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#tourist-spot"><i class="fa-solid fa-bus"></i> Pontos Turísticos</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#culture"><i class="fa-solid fa-calendar"></i> Culturas e Eventos</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#gastronomy"><i class="fa-solid fa-utensils"></i> Gastronomia</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#lodging"><i class="fa-solid fa-hotel"></i> Hospedagem</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#how-to-get"><i class="fa-solid fa-plane"></i> Como Chegar</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <header class="header-barra">
-    </header>
+    <!-- Decorative accent bar below the header -->
+    <div class="header-barra"></div>
 
+
+    <!-- ===================== MAIN CONTENT ===================== -->
     <main>
+
+        <!-- ---- HERO SECTION ---- -->
         <section class="principal slide-top">
             <div class="conteudo-principal">
                 <div class="texts">
-                    <h2 class="main-title">Descubra Jerusalém</h2>
-                    <p class="main-text">Uma cidade milenar onde história, cultura e espiritualidade se encontram. <br>
-                        <br> Explore monumentos sagrados, mercados vibrantes e paisagens inesquecíveis em um dos
-                        destinos mais fascinantes do mundo.
+                    <h1 class="main-title">Descubra Jerusalém</h1>
+                    <p class="main-text">
+                        Uma cidade milenar onde história, cultura e espiritualidade se encontram.<br><br>
+                        Explore monumentos sagrados, mercados vibrantes e paisagens inesquecíveis
+                        em um dos destinos mais fascinantes do mundo.
                     </p>
-                    <a href="" class="main-btn">Venha Conhecer</a>
+                    <a href="#on-city" class="main-btn">Venha Conhecer</a>
                 </div>
-
             </div>
         </section>
 
-        <section class="about-city">
 
-            <div class="about-city-text container-sm">
+        <!-- ---- ABOUT THE CITY SECTION ---- -->
+        <section class="about-city" id="on-city">
+
+            <!-- Section heading -->
+            <div class="about-city-text">
                 <h2>Sobre Jerusalém</h2>
-                <p> Uma das cidades mais antigas e sagradas do mundo, <br> com mais de 5.000 anos de história</p>
+                <p>Uma das cidades mais antigas e sagradas do mundo,<br>com mais de 5.000 anos de história</p>
             </div>
 
-            <div class="container overflow-hidden" id="on-city">
-                <div class="row gy-5">
-                    <div class="col-6">
-                        <div class="p-3 border bg-light about-city-content">
-                            <h2 class="card-title">📜 História Milenar</h2>
-                            <p class="card-p">Jerusalém tem mais de 5.000 anos de existência e é uma das cidades
-                                continuamente habitadas mais antigas do planeta. Foi capital do Reino de Israel sob o
-                                Rei
-                                David (1004 a.C.), destruída e reconstruída várias vezes, e testemunhou a ascensão e
-                                queda
-                                de grandes impérios: Babilônios, Persas, Gregos, Romanos, Bizantinos, Árabes, Cruzados e
-                                Otomanos. Cada conquista deixou sua marca, criando camadas arqueológicas com até 20
-                                metros
-                                de profundidade.</p>
+            <!-- Info cards grid (Bootstrap) -->
+            <div class="container">
+                <div class="row gy-4 gx-4">
+
+                    <!-- Card: Millennial History -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="about-city-content h-100">
+                            <h3 class="c-title">📜 História Milenar</h3>
+                            <p class="c-p">
+                                Jerusalém tem mais de 5.000 anos de existência e é uma das cidades continuamente
+                                habitadas mais antigas do planeta. Foi capital do Reino de Israel sob o Rei David
+                                (1004 a.C.), destruída e reconstruída várias vezes, e testemunhou a ascensão e queda
+                                de grandes impérios: Babilônios, Persas, Gregos, Romanos, Bizantinos, Árabes, Cruzados
+                                e Otomanos. Cada conquista deixou sua marca, criando camadas arqueológicas com até 20
+                                metros de profundidade.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col-6">
-                        <div class="p-3 border bg-light about-city-content">
-                            <h2 class="card-title">🕌 Cidade Sagrada para Três Religiões</h2>
-                            <p class="card-p">Jerusalém é a ÚNICA cidade no mundo considerada sagrada pelas três
-                                principais religiões monoteístas. Para o Judaísmo, abriga o Muro das Lamentações e o
-                                local dos antigos Templos. Para o Cristianismo, é onde Jesus foi crucificado e
-                                ressuscitou. Para o Islamismo, é o terceiro local mais sagrado, onde o profeta Maomé
-                                ascendeu ao céu. Esta convergência única torna Jerusalém um centro espiritual sem igual
-                                no planeta.</p>
+                    <!-- Card: Sacred City for Three Religions -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="about-city-content h-100">
+                            <h3 class="c-title">🕌 Cidade Sagrada para Três Religiões</h3>
+                            <p class="c-p">
+                                Jerusalém é a ÚNICA cidade no mundo considerada sagrada pelas três principais religiões
+                                monoteístas. Para o Judaísmo, abriga o Muro das Lamentações e o local dos antigos
+                                Templos. Para o Cristianismo, é onde Jesus foi crucificado e ressuscitou. Para o
+                                Islamismo, é o terceiro local mais sagrado, onde o profeta Maomé ascendeu ao céu.
+                                Esta convergência única torna Jerusalém um centro espiritual sem igual no planeta.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col-6">
-                        <div class="p-3 border bg-light about-city-content">
-                            <h2 class="card-title">🏛️ Patrimônio Mundial da UNESCO</h2>
-                            <p class="card-p">A Cidade Velha de Jerusalém e suas muralhas são Patrimônio Mundial da
-                                UNESCO. Com apenas 1 km², está dividida em quatro bairros históricos: Judeu, Cristão,
-                                Muçulmano e Armênio. Todas as construções devem usar a famosa "Pedra de Jerusalém"
-                                (calcário local), que dá à cidade sua cor dourada característica ao pôr do sol. As
-                                muralhas atuais foram construídas em 1538 pelo sultão otomano Solimão, o Magnífico.</p>
+                    <!-- Card: UNESCO World Heritage -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="about-city-content h-100">
+                            <h3 class="c-title">🏛️ Patrimônio Mundial da UNESCO</h3>
+                            <p class="c-p">
+                                A Cidade Velha de Jerusalém e suas muralhas são Patrimônio Mundial da UNESCO.
+                                Com apenas 1 km², está dividida em quatro bairros históricos: Judeu, Cristão, Muçulmano
+                                e Armênio. Todas as construções devem usar a famosa "Pedra de Jerusalém" (calcário
+                                local), que dá à cidade sua cor dourada característica ao pôr do sol. As muralhas
+                                atuais foram construídas em 1538 pelo sultão otomano Solimão, o Magnífico.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col-6">
-                        <div class="p-3 border bg-light about-city-content">
-                            <h2 class="card-title">📍 Informações Práticas</h2>
-                            <p class="card-p">População: 950.000 habitantes | Idiomas: Hebraico, Árabe e Inglês | Moeda:
-                                Novo Shekel Israelense (₪) | Clima: Mediterrâneo, com verões quentes (25-35°C) e
-                                invernos amenos (8-18°C). Melhor época: Primavera (março a maio) e Outono (setembro a
-                                novembro). Jerusalém fica a 785 metros de altitude, entre o Mar Mediterrâneo e o Mar
-                                Morto. Recebe mais de 3,5 milhões de turistas anualmente.</p>
+                    <!-- Card: Practical Information -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="about-city-content h-100">
+                            <h3 class="c-title">📍 Informações Práticas</h3>
+                            <p class="c-p">
+                                População: 950.000 habitantes | Idiomas: Hebraico, Árabe e Inglês | Moeda: Novo Shekel
+                                Israelense (₪) | Clima: Mediterrâneo, com verões quentes (25–35°C) e invernos amenos
+                                (8–18°C). Melhor época: Primavera (março a maio) e Outono (setembro a novembro).
+                                Jerusalém fica a 785 metros de altitude, entre o Mar Mediterrâneo e o Mar Morto.
+                                Recebe mais de 3,5 milhões de turistas anualmente.
+                            </p>
                         </div>
                     </div>
+
+                </div><!-- end .row -->
+            </div><!-- end .container -->
+        </section><!-- end #on-city -->
+
+
+        <!-- ---- TOURIST SPOTS SECTION ---- -->
+        <section class="tourist-spot" id="tourist-spot">
+
+            <!-- Section heading -->
+            <div class="section-header fade-in">
+                <div class="container">
+                    <h2 class="spot-title">Pontos Turísticos</h2>
+                    <div class="divider"></div>
+                    <p class="spot-subtitle">Descubra os locais mais emblemáticos e significativos que fazem de Jerusalém um destino único no mundo</p>
                 </div>
             </div>
 
-
-        </section>
-
-        <section class="tourist-spot">
-             <section class="section-header fade-in">
-        <div class="container" >
-            <h1>Pontos Turísticos</h1>
-            <div class="divider" id="tourist-spot"></div>
-            <p>Descubra os locais mais emblemáticos e significativos que fazem de Jerusalém um destino único no mundo</p>
-        </div>
-    </section>
-            <section class="attractions-section" >
+            <!-- Filters + cards area -->
+            <div class="attractions-section">
                 <div class="container">
 
-                    <!-- Filtros de Categoria -->
+                    <!-- Category filter buttons -->
                     <div class="filter-tabs">
                         <button class="filter-btn active" data-filter="all">Todos</button>
                         <button class="filter-btn" data-filter="religious">Religioso</button>
@@ -139,445 +193,292 @@
                         <button class="filter-btn" data-filter="nature">Natureza</button>
                     </div>
 
-                    <!-- Grid de Atrações -->
-                    <div class="row g-4">
+                    <!-- Attraction cards grid -->
+                    <div class="row g-4" id="cardsGrid">
 
-                        <!-- Card 1: Muro das Lamentações -->
-                        <div class="col-lg-4 col-md-6 card-animate" data-category="religious">
+                        <!-- Card 1: Western Wall -->
+                        <div class="col-lg-4 col-md-6 col-12 card-animate" data-category="religious">
                             <div class="attraction-card">
                                 <div class="carousel-wrapper">
-                                    <!-- Carousel Bootstrap -->
-                                    <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="carousel1" class="carousel slide" data-bs-ride="false">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#carousel1"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#carousel1"
-                                                data-bs-slide-to="2"></button>
+                                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></button>
+                                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"></button>
                                         </div>
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <div class="image-placeholder"><img
-                                                        src="./img/muro das lamentações/muro1.jpg" alt=""></div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder"><img
-                                                        src="./img/muro das lamentações/muro2.jpg" alt="" srcset="">
+                                                <div class="image-placeholder">
+                                                    <img src="./img/muro das lamentações/muro1.jpg" alt="Western Wall front view">
                                                 </div>
                                             </div>
                                             <div class="carousel-item">
-                                                <div class="image-placeholder"><img
-                                                        src="img/muro das lamentações/muro3.jpg" alt="" srcset=""></div>
+                                                <div class="image-placeholder">
+                                                    <img src="./img/muro das lamentações/muro2.jpg" alt="Western Wall worshippers">
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="image-placeholder">
+                                                    <img src="./img/muro das lamentações/muro3.jpg" alt="Western Wall night">
+                                                </div>
                                             </div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon"></span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
                                             <span class="carousel-control-next-icon"></span>
                                         </button>
                                     </div>
-                                    <span class="category-badge">
-                                        <i class="bi bi-star-fill"></i> Religioso
-                                    </span>
-                                    <div class="photo-counter">
-                                        <i class="bi bi-camera-fill"></i> 3 fotos
-                                    </div>
+                                    <span class="category-badge"><i class="bi bi-star-fill"></i> Religioso</span>
+                                    <div class="photo-counter"><i class="bi bi-camera-fill"></i> 3 fotos</div>
                                 </div>
                                 <div class="attraction-content">
                                     <h3 class="attraction-title">Muro das Lamentações</h3>
                                     <p class="attraction-description">
                                         O local mais sagrado do Judaísmo, onde fiéis de todo o mundo vêm para orar e
-                                        depositar seus pedidos.
-                                        Um símbolo de fé e resiliência com mais de 2.000 anos de história.
+                                        depositar seus pedidos. Um símbolo de fé e resiliência com mais de 2.000 anos de história.
                                     </p>
                                     <div class="attraction-info">
-                                        <span class="info-item">
-                                            <i class="bi bi-clock"></i> 24 horas
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-cash"></i> Gratuito
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-geo-alt"></i> Cidade Velha
-                                        </span>
+                                        <span class="info-item"><i class="bi bi-clock"></i> 24 horas</span>
+                                        <span class="info-item"><i class="bi bi-cash"></i> Gratuito</span>
+                                        <span class="info-item"><i class="bi bi-geo-alt"></i> Cidade Velha</span>
                                     </div>
-                                    <a href="#" class="btn-details">
-                                        Saiba Mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    <a href="#" class="btn-details">Saiba Mais <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 2: Igreja do Santo Sepulcro -->
-                        <div class="col-lg-4 col-md-6 card-animate" data-category="religious">
+                        <!-- Card 2: Church of the Holy Sepulchre -->
+                        <div class="col-lg-4 col-md-6 col-12 card-animate" data-category="religious">
                             <div class="attraction-card">
                                 <div class="carousel-wrapper">
-                                    <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="carousel2" class="carousel slide" data-bs-ride="false">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#carousel2"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#carousel2"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#carousel2"
-                                                data-bs-slide-to="3"></button>
+                                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"></button>
+                                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"></button>
+                                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3"></button>
                                         </div>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="image-placeholder">⛪</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">✝️</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🕯️</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">⛪</div>
-                                            </div>
+                                            <div class="carousel-item active"><div class="image-placeholder"><img src="img/Igreja do santo sepruco/s-1.jpeg" alt=""></div></div>
+                                            <div class="carousel-item"><div class="image-placeholder"><img src="img/Igreja do santo sepruco/s-2.JPG" alt=""></div></div>
+                                            <div class="carousel-item"><div class="image-placeholder"><img src="img/Igreja do santo sepruco/s-3.webp" alt=""></div></div>
+                                            <div class="carousel-item"><div class="image-placeholder"><img src="img/Igreja do santo sepruco/s-4.jpeg" alt=""></div></div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon"></span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
                                             <span class="carousel-control-next-icon"></span>
                                         </button>
                                     </div>
-                                    <span class="category-badge">
-                                        <i class="bi bi-star-fill"></i> Religioso
-                                    </span>
-                                    <div class="photo-counter">
-                                        <i class="bi bi-camera-fill"></i> 4 fotos
-                                    </div>
+                                    <span class="category-badge"><i class="bi bi-star-fill"></i> Religioso</span>
+                                    <div class="photo-counter"><i class="bi bi-camera-fill"></i> 4 fotos</div>
                                 </div>
                                 <div class="attraction-content">
                                     <h3 class="attraction-title">Igreja do Santo Sepulcro</h3>
                                     <p class="attraction-description">
-                                        Construída sobre o local onde Jesus foi crucificado e ressuscitou. Um dos
-                                        destinos de
-                                        peregrinação mais importantes do cristianismo, com arquitetura fascinante.
+                                        Construída sobre o local onde Jesus foi crucificado e ressuscitou. Um dos destinos
+                                        de peregrinação mais importantes do cristianismo, com arquitetura fascinante.
                                     </p>
                                     <div class="attraction-info">
-                                        <span class="info-item">
-                                            <i class="bi bi-clock"></i> 4h - 19h
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-cash"></i> Gratuito
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-camera"></i> Fotos OK
-                                        </span>
+                                        <span class="info-item"><i class="bi bi-clock"></i> 4h - 19h</span>
+                                        <span class="info-item"><i class="bi bi-cash"></i> Gratuito</span>
+                                        <span class="info-item"><i class="bi bi-camera"></i> Fotos OK</span>
                                     </div>
-                                    <a href="#" class="btn-details">
-                                        Saiba Mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    <a href="#" class="btn-details">Saiba Mais <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 3: Cúpula da Rocha -->
-                        <div class="col-lg-4 col-md-6 card-animate" data-category="religious">
+                        <!-- Card 3: Dome of the Rock -->
+                        <div class="col-lg-4 col-md-6 col-12 card-animate" data-category="religious">
                             <div class="attraction-card">
                                 <div class="carousel-wrapper">
-                                    <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="carousel3" class="carousel slide" data-bs-ride="false">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#carousel3"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#carousel3"
-                                                data-bs-slide-to="2"></button>
+                                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"></button>
+                                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2"></button>
                                         </div>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="image-placeholder">🕌</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🌙</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">⭐</div>
-                                            </div>
+                                            <div class="carousel-item active"><div class="image-placeholder">🕌</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🌙</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">⭐</div></div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon"></span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
                                             <span class="carousel-control-next-icon"></span>
                                         </button>
                                     </div>
-                                    <span class="category-badge">
-                                        <i class="bi bi-star-fill"></i> Religioso
-                                    </span>
-                                    <div class="photo-counter">
-                                        <i class="bi bi-camera-fill"></i> 3 fotos
-                                    </div>
+                                    <span class="category-badge"><i class="bi bi-star-fill"></i> Religioso</span>
+                                    <div class="photo-counter"><i class="bi bi-camera-fill"></i> 3 fotos</div>
                                 </div>
                                 <div class="attraction-content">
                                     <h3 class="attraction-title">Cúpula da Rocha</h3>
                                     <p class="attraction-description">
                                         Com sua inconfundível cúpula dourada, este santuário islâmico marca o local onde
-                                        o profeta
-                                        Maomé ascendeu ao céu. Obra-prima da arquitetura medieval islâmica.
+                                        o profeta Maomé ascendeu ao céu. Obra-prima da arquitetura medieval islâmica.
                                     </p>
                                     <div class="attraction-info">
-                                        <span class="info-item">
-                                            <i class="bi bi-clock"></i> Horário limitado
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-person"></i> Vestimenta apropriada
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-ticket"></i> Acesso restrito
-                                        </span>
+                                        <span class="info-item"><i class="bi bi-clock"></i> Horário limitado</span>
+                                        <span class="info-item"><i class="bi bi-person"></i> Vestimenta</span>
+                                        <span class="info-item"><i class="bi bi-ticket"></i> Acesso restrito</span>
                                     </div>
-                                    <a href="#" class="btn-details">
-                                        Saiba Mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    <a href="#" class="btn-details">Saiba Mais <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 4: Cidade Velha -->
-                        <div class="col-lg-4 col-md-6 card-animate" data-category="historical">
+                        <!-- Card 4: Old City -->
+                        <div class="col-lg-4 col-md-6 col-12 card-animate" data-category="historical">
                             <div class="attraction-card">
                                 <div class="carousel-wrapper">
-                                    <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="carousel4" class="carousel slide" data-bs-ride="false">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#carousel4"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#carousel4"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#carousel4"
-                                                data-bs-slide-to="3"></button>
-                                            <button type="button" data-bs-target="#carousel4"
-                                                data-bs-slide-to="4"></button>
+                                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active"></button>
+                                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="2"></button>
+                                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="3"></button>
+                                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="4"></button>
                                         </div>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="image-placeholder">🏛️</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🚪</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🏺</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🕍</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🏰</div>
-                                            </div>
+                                            <div class="carousel-item active"><div class="image-placeholder">🏛️</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🚪</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🏺</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🕍</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🏰</div></div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel4"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon"></span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel4"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
                                             <span class="carousel-control-next-icon"></span>
                                         </button>
                                     </div>
-                                    <span class="category-badge">
-                                        <i class="bi bi-book"></i> Histórico
-                                    </span>
-                                    <div class="photo-counter">
-                                        <i class="bi bi-camera-fill"></i> 5 fotos
-                                    </div>
+                                    <span class="category-badge"><i class="bi bi-book"></i> Histórico</span>
+                                    <div class="photo-counter"><i class="bi bi-camera-fill"></i> 5 fotos</div>
                                 </div>
                                 <div class="attraction-content">
                                     <h3 class="attraction-title">Cidade Velha</h3>
                                     <p class="attraction-description">
                                         Labirinto fascinante de vielas estreitas dividido em quatro bairros: Judeu,
-                                        Cristão, Muçulmano e Armênio.
-                                        Patrimônio Mundial da UNESCO com tesouros a cada esquina.
+                                        Cristão, Muçulmano e Armênio. Patrimônio Mundial da UNESCO com tesouros a cada esquina.
                                     </p>
                                     <div class="attraction-info">
-                                        <span class="info-item">
-                                            <i class="bi bi-map"></i> Visita guiada
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-shop"></i> Mercados
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-award"></i> UNESCO
-                                        </span>
+                                        <span class="info-item"><i class="bi bi-map"></i> Visita guiada</span>
+                                        <span class="info-item"><i class="bi bi-shop"></i> Mercados</span>
+                                        <span class="info-item"><i class="bi bi-award"></i> UNESCO</span>
                                     </div>
-                                    <a href="#" class="btn-details">
-                                        Saiba Mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    <a href="#" class="btn-details">Saiba Mais <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 5: Monte das Oliveiras -->
-                        <div class="col-lg-4 col-md-6 card-animate" data-category="nature">
+                        <!-- Card 5: Mount of Olives -->
+                        <div class="col-lg-4 col-md-6 col-12 card-animate" data-category="nature">
                             <div class="attraction-card">
                                 <div class="carousel-wrapper">
-                                    <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="carousel5" class="carousel slide" data-bs-ride="false">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel5" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#carousel5"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#carousel5"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#carousel5"
-                                                data-bs-slide-to="3"></button>
+                                            <button type="button" data-bs-target="#carousel5" data-bs-slide-to="0" class="active"></button>
+                                            <button type="button" data-bs-target="#carousel5" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#carousel5" data-bs-slide-to="2"></button>
+                                            <button type="button" data-bs-target="#carousel5" data-bs-slide-to="3"></button>
                                         </div>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="image-placeholder">🌄</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🌅</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🏙️</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🌆</div>
-                                            </div>
+                                            <div class="carousel-item active"><div class="image-placeholder">🌄</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🌅</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🏙️</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🌆</div></div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel5"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon"></span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel5"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
                                             <span class="carousel-control-next-icon"></span>
                                         </button>
                                     </div>
-                                    <span class="category-badge">
-                                        <i class="bi bi-tree"></i> Natureza
-                                    </span>
-                                    <div class="photo-counter">
-                                        <i class="bi bi-camera-fill"></i> 4 fotos
-                                    </div>
+                                    <span class="category-badge"><i class="bi bi-tree"></i> Natureza</span>
+                                    <div class="photo-counter"><i class="bi bi-camera-fill"></i> 4 fotos</div>
                                 </div>
                                 <div class="attraction-content">
                                     <h3 class="attraction-title">Monte das Oliveiras</h3>
                                     <p class="attraction-description">
-                                        Vista panorâmica espetacular de Jerusalém. Local de grande significado bíblico e
-                                        lar do
-                                        mais antigo cemitério judaico ainda em uso. Pôr do sol inesquecível.
+                                        Vista panorâmica espetacular de Jerusalém. Local de grande significado bíblico
+                                        e lar do mais antigo cemitério judaico ainda em uso. Pôr do sol inesquecível.
                                     </p>
                                     <div class="attraction-info">
-                                        <span class="info-item">
-                                            <i class="bi bi-sunrise"></i> Melhor ao amanhecer
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-camera"></i> Vista panorâmica
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-heart"></i> Romântico
-                                        </span>
+                                        <span class="info-item"><i class="bi bi-sunrise"></i> Melhor ao amanhecer</span>
+                                        <span class="info-item"><i class="bi bi-camera"></i> Vista panorâmica</span>
+                                        <span class="info-item"><i class="bi bi-heart"></i> Romântico</span>
                                     </div>
-                                    <a href="#" class="btn-details">
-                                        Saiba Mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    <a href="#" class="btn-details">Saiba Mais <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 6: Mercado Mahane Yehuda -->
-                        <div class="col-lg-4 col-md-6 card-animate" data-category="cultural">
+                        <!-- Card 6: Mahane Yehuda Market -->
+                        <div class="col-lg-4 col-md-6 col-12 card-animate" data-category="cultural">
                             <div class="attraction-card">
                                 <div class="carousel-wrapper">
-                                    <div id="carousel6" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="carousel6" class="carousel slide" data-bs-ride="false">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel6" data-bs-slide-to="0"
-                                                class="active"></button>
-                                            <button type="button" data-bs-target="#carousel6"
-                                                data-bs-slide-to="1"></button>
-                                            <button type="button" data-bs-target="#carousel6"
-                                                data-bs-slide-to="2"></button>
-                                            <button type="button" data-bs-target="#carousel6"
-                                                data-bs-slide-to="3"></button>
+                                            <button type="button" data-bs-target="#carousel6" data-bs-slide-to="0" class="active"></button>
+                                            <button type="button" data-bs-target="#carousel6" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#carousel6" data-bs-slide-to="2"></button>
+                                            <button type="button" data-bs-target="#carousel6" data-bs-slide-to="3"></button>
                                         </div>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="image-placeholder">🛍️</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🥘</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🍇</div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="image-placeholder">🧺</div>
-                                            </div>
+                                            <div class="carousel-item active"><div class="image-placeholder">🛍️</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🥘</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🍇</div></div>
+                                            <div class="carousel-item"><div class="image-placeholder">🧺</div></div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel6"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel6" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon"></span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel6"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carousel6" data-bs-slide="next">
                                             <span class="carousel-control-next-icon"></span>
                                         </button>
                                     </div>
-                                    <span class="category-badge">
-                                        <i class="bi bi-palette"></i> Cultural
-                                    </span>
-                                    <div class="photo-counter">
-                                        <i class="bi bi-camera-fill"></i> 4 fotos
-                                    </div>
+                                    <span class="category-badge"><i class="bi bi-palette"></i> Cultural</span>
+                                    <div class="photo-counter"><i class="bi bi-camera-fill"></i> 4 fotos</div>
                                 </div>
                                 <div class="attraction-content">
                                     <h3 class="attraction-title">Mercado Mahane Yehuda</h3>
                                     <p class="attraction-description">
                                         O coração pulsante de Jerusalém! Mercado vibrante com mais de 250 vendedores
-                                        oferecendo
-                                        especiarias, produtos frescos, comidas típicas e artesanato local.
+                                        oferecendo especiarias, produtos frescos, comidas típicas e artesanato local.
                                     </p>
                                     <div class="attraction-info">
-                                        <span class="info-item">
-                                            <i class="bi bi-clock"></i> Dom-Qui 8h-19h
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-basket"></i> Compras
-                                        </span>
-                                        <span class="info-item">
-                                            <i class="bi bi-egg-fried"></i> Gastronomia
-                                        </span>
+                                        <span class="info-item"><i class="bi bi-clock"></i> Dom-Qui 8h–19h</span>
+                                        <span class="info-item"><i class="bi bi-basket"></i> Compras</span>
+                                        <span class="info-item"><i class="bi bi-egg-fried"></i> Gastronomia</span>
                                     </div>
-                                    <a href="#" class="btn-details">
-                                        Saiba Mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    <a href="#" class="btn-details">Saiba Mais <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </section>
-        </section>
-
-
+                    </div><!-- end #cardsGrid -->
+                </div><!-- end .container -->
+            </div><!-- end .attractions-section -->
+        </section><!-- end #tourist-spot -->
 
     </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+    <!-- ===================== SCRIPTS ===================== -->
 
+    <!-- Bootstrap 5.3 JS Bundle (includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts -->
     <script src="./javascript/script.js"></script>
 
 </body>
-
 </html>
