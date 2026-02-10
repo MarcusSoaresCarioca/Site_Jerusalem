@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap');
 
 :root{
     --cor-principal: #7E845E;
@@ -14,6 +14,15 @@
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background-image: url("../img/fundo1.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
 /*Header*/
 header{
     width: 100%;
@@ -21,6 +30,7 @@ header{
     padding: 10px 0;
     display: flex;
     align-items: center;
+    background-color: #fff;
 }
 
 
@@ -70,7 +80,7 @@ header figure img{
 /*End Header*/
 
 .principal{
-    background-image: url("../img/fundo1.jpg");
+   background-color: transparent;
     width: 100%;
     height: 580px;
     background-position: center;
@@ -78,7 +88,7 @@ header figure img{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.5);
+  
 }
 
 .conteudo-principal{
@@ -102,6 +112,7 @@ header figure img{
     color: white;
     margin-bottom: 40px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-family: 'Playfair Display', serif;
 }
 
 .main-text{
@@ -142,7 +153,8 @@ header figure img{
 .about-city{
     width: 100%;
     height: auto;
-    background-color: var(--cor-principal);
+    background-color: transparent;
+    padding-bottom: 30px;
    
 }
 
@@ -157,6 +169,7 @@ header figure img{
    color: #fff;
    padding: 30px 10px;
    font-size: 5rem;
+   font-family: 'Playfair Display', serif;
    
 }
 
@@ -198,7 +211,455 @@ header figure img{
 }
 
 
+
+
 /*End about the city*/
 
 
+.transparent{
+    width: 100%;
+    height: 60vh;
+    background-color: transparent;
+}
 
+
+/*tourist-spot*/
+
+.tourist-spot{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+}
+
+
+ :root {
+            --primary-gold: #7E845E;
+            --dark-blue: #1B2838;
+            --light-cream: #7E845E;
+            --accent-terracotta: #C47D5C;
+            --text-dark: #2C2C2C;
+            --stone-beige:#7E845E;
+        }
+        
+    
+        
+        /* Animação suave ao carregar */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Header da Seção */
+        .section-header {
+            background:transparent;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        
+        @keyframes movePattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+        
+        .section-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .section-header p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+        }
+        
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: #fff;
+            margin: 30px auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Container Principal */
+        .attractions-section {
+            padding: 80px 0;
+            background: transparent;
+        }
+        
+        /* Filtros/Categorias */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+        
+        .filter-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid var(--stone-beige);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-gold);
+            color: white;
+            border-color: var(--primary-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 165, 116, 0.3);
+        }
+        
+        /* Cards de Atrações */
+        .attraction-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Carousel Container */
+        .carousel-wrapper {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .carousel {
+            height: 100%;
+        }
+        
+        .carousel-inner,
+        .carousel-item {
+            height: 100%;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Customização dos controles do carousel */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 165, 116, 0.9);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .attraction-card:hover .carousel-control-prev,
+        .attraction-card:hover .carousel-control-next {
+            opacity: 1;
+        }
+        
+        .carousel-control-prev {
+            left: 15px;
+        }
+        
+        .carousel-control-next {
+            right: 15px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: var(--primary-gold);
+        }
+        
+        /* Indicadores do carousel */
+        .carousel-indicators {
+            bottom: 15px;
+        }
+        
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            margin: 0 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-indicators .active {
+            background-color: var(--primary-gold);
+            width: 30px;
+            border-radius: 5px;
+        }
+        
+        /* Badge de Categoria sobre o carousel */
+        .category-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        
+        /* Placeholder de Imagem com gradiente */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-terracotta) 100%);
+        }
+        
+        /* Conteúdo do Card */
+        .attraction-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .attraction-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .attraction-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #5a5a5a;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        /* Informações Práticas */
+        .attraction-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--light-cream);
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: #e4e4e4;
+        }
+        
+        .info-item i {
+            color: var(--primary-gold);
+            font-size: 1.1rem;
+        }
+        
+        /* Botão Saiba Mais */
+        .btn-details {
+            background: var(--primary-gold);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .btn-details:hover {
+            background: var(--cor-secundaria);
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(212, 165, 116, 0.4);
+            color: white;
+        }
+        
+        .btn-details i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-details:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Contador de fotos no carousel */
+        .photo-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        /* Estatísticas/Destaques */
+        .stats-section {
+            background: var(--dark-blue);
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .section-header h1 {
+                font-size: 3rem;
+            }
+            
+            .carousel-wrapper {
+                height: 280px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-header p {
+                font-size: 1.1rem;
+            }
+            
+            .filter-tabs {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            .attraction-title {
+                font-size: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-wrapper {
+                height: 250px;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                opacity: 1;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        /* Animações de Entrada */
+        .card-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-animate:nth-child(1) { animation-delay: 0.1s; }
+        .card-animate:nth-child(2) { animation-delay: 0.2s; }
+        .card-animate:nth-child(3) { animation-delay: 0.3s; }
+        .card-animate:nth-child(4) { animation-delay: 0.4s; }
+        .card-animate:nth-child(5) { animation-delay: 0.5s; }
+        .card-animate:nth-child(6) { animation-delay: 0.6s; }
+
+/*end tourist-spot*/
